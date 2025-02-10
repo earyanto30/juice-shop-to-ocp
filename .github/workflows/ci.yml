@@ -50,7 +50,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: "Set tag & labels for ${{ github.ref }}"
         run: |
-          echo "DOCKER_TAG=$GITHUB_REF-${GITHUB_SHA:0:8}" >> $GITHUB_ENV
+          echo "DOCKER_TAG=$GITHUB_BASE_REF-${GITHUB_SHA:0:8}" >> $GITHUB_ENV
           echo "VCS_REF=`git rev-parse --short HEAD`" >> $GITHUB_ENV
           echo "BUILD_DATE=`date -u +”%Y-%m-%dT%H:%M:%SZ”`" >> $GITHUB_ENV
       - name: "Build and push for AMD64 and ARM64 processors"
