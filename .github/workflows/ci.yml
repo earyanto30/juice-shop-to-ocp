@@ -21,7 +21,7 @@ env:
   NODE_DEFAULT_VERSION: 20
   ANGULAR_CLI_VERSION: 17
   CYCLONEDX_NPM_VERSION: '^1.12.0'
-  IMAGE_NAME: bkimminich/juice-shop
+  IMAGE_NAME: registry.kaz.my.id/juice-shop
 jobs:
   docker-test:
     runs-on: ubuntu-latest
